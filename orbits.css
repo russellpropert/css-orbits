@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  background-color: black;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+:root {
+  --sun-diameter: 5vmax;
+}
+
+.sun {
+  position: absolute;
+  width: var(--sun-diameter);
+  height: var(--sun-diameter);
+  background-color: rgb(253, 98, 21);
+  border-radius: 50%;
+  filter: blur(calc(var(--sun-diameter) / 18));
+}
+
+.mercury {
+  position: absolute;
+  --planet-diameter: calc(var(--sun-diameter) / 3);
+  width: var(--planet-diameter);
+  height: var(--planet-diameter);
+  background-image: linear-gradient(#111111 40%, rgb(217, 217, 217));
+  border-radius: 50%;
+  animation: mercury-orbit 10s linear infinite;
+}
+
+@keyframes mercury-orbit {
+  0% {
+    transform: rotate(0deg) translate(0, -400%);
+  }
+  100% {
+    transform: rotate(360deg) translate(0, -400%);
+  }
+}
+
+.venus {
+  position: absolute;
+  --planet-diameter: calc(var(--sun-diameter) / 2.2);
+  width: var(--planet-diameter);
+  height: var(--planet-diameter);
+  background-image: linear-gradient(#11120d 40%, rgb(255, 253, 212));
+  border-radius: 50%;
+  animation: venus-orbit 15s linear infinite;
+}
+
+@keyframes venus-orbit {
+  0% {
+    transform: rotate(0deg) translate(0, -500%);
+  }
+  100% {
+    transform: rotate(360deg) translate(0, -500%);
+  }
+}
+
+.earth {
+  position: absolute;
+  --planet-diameter: calc(var(--sun-diameter) / 2);
+  width: var(--planet-diameter);
+  height: var(--planet-diameter);
+  background-image: linear-gradient(#0c1322 40%, rgb(88, 157, 236));
+  border-radius: 50%;
+  animation: earth-orbit 20s linear infinite;
+}
+
+@keyframes earth-orbit {
+  0% {
+    transform: rotate(0deg) translate(0, -700%);
+  }
+  100% {
+    transform: rotate(360deg) translate(0, -700%);
+  }
+}
+
+
+.mars {
+  position: absolute;
+  --planet-diameter: calc(var(--sun-diameter) / 4);
+  width: var(--planet-diameter);
+  height: var(--planet-diameter);
+  background-image: linear-gradient(#170e0a 40%, rgb(235, 145, 106));
+  border-radius: 50%;
+  animation: mars-orbit 40s linear infinite;
+}
+
+@keyframes mars-orbit {
+  0% {
+    transform: rotate(0deg) translate(0, -2000%);
+  }
+  100% {
+    transform: rotate(360deg) translate(0, -2000%);
+  }
+}
