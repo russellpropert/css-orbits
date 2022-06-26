@@ -1,6 +1,6 @@
 # CSS Orbits
 
-This started as an experiment with CSS animation. The objective was to make thing go around in circles just using CSS.
+This started as an experiment with CSS animation. The objective was to make shapes go around in circles, just using CSS.
 
 ## To run
 
