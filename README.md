@@ -4,4 +4,4 @@ This started as an experiment with CSS animation. The objective was to make shap
 
 ## To run
 
-Clone the repository. Make sure the HTML and CSS files are in the same folder. Drag the HTML file into your browser.
+Clone the repository. Drag the HTML file into your browser.
