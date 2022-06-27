@@ -3,7 +3,7 @@ import express from 'express';
 const app = express();
 const dir = process.cwd();
 
-const port = 80;
+const port = 5000;
 const options = {
   dotfiles: "ignore",
   redirect: false
