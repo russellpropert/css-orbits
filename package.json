@@ -1,0 +1,22 @@
+{
+  "name": "css-orbits",
+  "version": "1.0.0",
+  "description": "This started as an experiment with CSS animation. The objective was to make shapes go around in circles, just using CSS.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/russellpropert/css-orbits.git"
+  },
+  "author": "Russell Propert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/russellpropert/css-orbits/issues"
+  },
+  "homepage": "https://github.com/russellpropert/css-orbits#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
