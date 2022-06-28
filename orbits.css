@@ -17,13 +17,61 @@ body {
   --sun-diameter: 5vmax;
 }
 
-.sun {
+.sun-l1 {
   position: absolute;
   width: var(--sun-diameter);
   height: var(--sun-diameter);
   background-color: rgb(253, 98, 21);
-  border-radius: 50%;
+  border-radius: 46% 47% 48% 49%;
   filter: blur(calc(var(--sun-diameter) / 18));
+  animation: sun-l1-rotation 3s linear infinite;
+}
+
+@keyframes sun-l1-rotation {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+.sun-l2 {
+  position: absolute;
+  width: var(--sun-diameter);
+  height: var(--sun-diameter);
+  background-image: radial-gradient(circle at 20px 20px, rgba(255, 68, 0, 0.766), rgba(255, 181, 34, 0.658));
+  border-radius: 46% 47% 48% 49%;
+  filter: blur(calc(var(--sun-diameter) / 18));
+  animation: sun-l2-rotation 30s linear infinite;
+}
+
+@keyframes sun-l2-rotation {
+  0% {
+    transform: rotate(0deg) translate(0, 2px);
+  }
+  100% {
+    transform: rotate(-360deg) translate(0, 2px);
+  }
+}
+
+.sun-l3 {
+  position: absolute;
+  width: var(--sun-diameter);
+  height: var(--sun-diameter);
+  background-image: radial-gradient(circle at -20px -20px, rgba(255, 223, 142, 0.672), rgba(255, 226, 146, 0));
+  border-radius: 48% 47% 45% 49%;
+  filter: blur(calc(var(--sun-diameter) / 18));
+  animation: sun-l3-rotation 15s linear infinite;
+}
+
+@keyframes sun-l3-rotation {
+  0% {
+    transform: rotate(22deg) translate(0, -2px);
+  }
+  100% {
+    transform: rotate(382deg) translate(0, -2px);
+  }
 }
 
 .mercury {
