@@ -28,7 +28,7 @@ body {
 
 .mercury {
   position: absolute;
-  --planet-diameter: calc(var(--sun-diameter) / 3);
+  --planet-diameter: calc(var(--sun-diameter) / 4.5);
   width: var(--planet-diameter);
   height: var(--planet-diameter);
   background-image: linear-gradient(#111111 40%, rgb(217, 217, 217));
@@ -38,10 +38,10 @@ body {
 
 @keyframes mercury-orbit {
   0% {
-    transform: rotate(0deg) translate(0, -400%);
+    transform: rotate(0deg) translate(0, -600%);
   }
   100% {
-    transform: rotate(360deg) translate(0, -400%);
+    transform: rotate(360deg) translate(0, -600%);
   }
 }
 
