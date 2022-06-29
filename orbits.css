@@ -17,7 +17,26 @@ body {
   --sun-diameter: 5vmax;
 }
 
+.sun-image-wrapper {
+  z-index: 2;
+  --sun-image-wrapper-multiplier: .88;
+  width: calc(var(--sun-diameter) * var(--sun-image-wrapper-multiplier));
+  height: calc(var(--sun-diameter) * var(--sun-image-wrapper-multiplier));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sun-image {
+  --sun-image-multiplier: 1.15;
+  width: calc(var(--sun-diameter) * var(--sun-image-multiplier));
+  height: calc(var(--sun-diameter) * var(--sun-image-multiplier));
+}
+
 .sun-l1 {
+  z-index: 1;
   position: absolute;
   width: var(--sun-diameter);
   height: var(--sun-diameter);
@@ -37,6 +56,7 @@ body {
 }
 
 .sun-l2 {
+  z-index: 3;
   position: absolute;
   width: var(--sun-diameter);
   height: var(--sun-diameter);
@@ -56,10 +76,11 @@ body {
 }
 
 .sun-l3 {
+  z-index: 4;
   position: absolute;
   width: var(--sun-diameter);
   height: var(--sun-diameter);
-  background-image: radial-gradient(circle at -20px -20px, rgba(255, 223, 142, 0.672), rgba(255, 226, 146, 0));
+  background-image: radial-gradient(circle at -20px -20px, rgba(255, 221, 142, 0.672), rgba(255, 226, 146, 0));
   border-radius: 48% 47% 45% 49%;
   filter: blur(calc(var(--sun-diameter) / 18));
   animation: sun-l3-rotation 15s linear infinite;
