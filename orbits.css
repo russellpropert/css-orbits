@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  background-color: black;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+:root {
+  --sun-diameter: 5vmax;
+}
+
+.sun-image-wrapper {
+  z-index: 2;
+  --sun-image-wrapper-multiplier: .88;
+  width: calc(var(--sun-diameter) * var(--sun-image-wrapper-multiplier));
+  height: calc(var(--sun-diameter) * var(--sun-image-wrapper-multiplier));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sun-image {
+  --sun-image-multiplier: 1.15;
+  width: calc(var(--sun-diameter) * var(--sun-image-multiplier));
+  height: calc(var(--sun-diameter) * var(--sun-image-multiplier));
+}
+
+.sun-l1 {
+  z-index: 1;
+  position: absolute;
+  width: var(--sun-diameter);
+  height: var(--sun-diameter);
+  background-color: rgba(253, 98, 21, 0.663);
+  border-radius: 46% 47% 48% 49%;
+  filter: blur(calc(var(--sun-diameter) / 18));
+  animation: sun-l1-rotation 5s linear infinite;
+}
+
+@keyframes sun-l1-rotation {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+.sun-l2 {
+  z-index: 3;
+  position: absolute;
+  width: var(--sun-diameter);
+  height: var(--sun-diameter);
+  background-image: radial-gradient(circle at 20px 20px, rgba(255, 68, 0, 0.619), rgba(255, 181, 34, 0.535));
+  border-radius: 46% 47% 48% 49%;
+  filter: blur(calc(var(--sun-diameter) / 18));
+  animation: sun-l2-rotation 20s linear infinite;
+}
+
+@keyframes sun-l2-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.sun-l3 {
+  z-index: 4;
+  position: absolute;
+  width: var(--sun-diameter);
+  height: var(--sun-diameter);
+  background-image: radial-gradient(circle at -20px -20px, rgba(255, 221, 142, 0.53), rgba(255, 226, 146, 0));
+  border-radius: 48% 47% 45% 49%;
+  filter: blur(calc(var(--sun-diameter) / 18));
+  animation: sun-l3-rotation 15s linear infinite;
+}
+
+@keyframes sun-l3-rotation {
+  0% {
+    transform: rotate(22deg);
+  }
+  100% {
+    transform: rotate(382deg);
+  }
+}
+
+.mercury {
+  position: absolute;
+  --planet-diameter: calc(var(--sun-diameter) / 4.5);
+  width: var(--planet-diameter);
+  height: var(--planet-diameter);
+  background-image: linear-gradient(#111111 40%, rgb(217, 217, 217));
+  border-radius: 50%;
+  animation: mercury-orbit 10s linear infinite;
+}
+
+@keyframes mercury-orbit {
+  0% {
+    transform: rotate(0deg) translate(0, -600%);
+  }
+  100% {
+    transform: rotate(360deg) translate(0, -600%);
+  }
+}
+
+.venus {
+  position: absolute;
+  --planet-diameter: calc(var(--sun-diameter) / 2.2);
+  width: var(--planet-diameter);
+  height: var(--planet-diameter);
+  background-image: linear-gradient(#11120d 40%, rgb(255, 253, 212));
+  border-radius: 50%;
+  animation: venus-orbit 15s linear infinite;
+}
+
+@keyframes venus-orbit {
+  0% {
+    transform: rotate(0deg) translate(0, -500%);
+  }
+  100% {
+    transform: rotate(360deg) translate(0, -500%);
+  }
+}
+
+.earth {
+  position: absolute;
+  --planet-diameter: calc(var(--sun-diameter) / 2);
+  width: var(--planet-diameter);
+  height: var(--planet-diameter);
+  background-image: linear-gradient(#0c1322 40%, rgb(88, 157, 236));
+  border-radius: 50%;
+  animation: earth-orbit 20s linear infinite;
+}
+
+@keyframes earth-orbit {
+  0% {
+    transform: rotate(0deg) translate(0, -700%);
+  }
+  100% {
+    transform: rotate(360deg) translate(0, -700%);
+  }
+}
+
+
+.mars {
+  position: absolute;
+  --planet-diameter: calc(var(--sun-diameter) / 4);
+  width: var(--planet-diameter);
+  height: var(--planet-diameter);
+  background-image: linear-gradient(#170e0a 40%, rgb(235, 145, 106));
+  border-radius: 50%;
+  animation: mars-orbit 40s linear infinite;
+}
+
+@keyframes mars-orbit {
+  0% {
+    transform: rotate(0deg) translate(0, -2000%);
+  }
+  100% {
+    transform: rotate(360deg) translate(0, -2000%);
+  }
+}
